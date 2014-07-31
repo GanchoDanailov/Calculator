@@ -1,0 +1,10 @@
+{
+	"name": "Calculator",
+	"description": "hello world test app",
+	"version": "0.0.1",
+	"dependencies": {
+		"socket.io": "^1.0.4",
+		"express": "4.x"
+	}
+}
+

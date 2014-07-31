@@ -1,0 +1,104 @@
+
+$main-background:#373737;
+
+
+@mixin font-family($family) {
+  font-family: "#{$family}", Arial, sans-serif;
+}
+
+html, body {
+  margin:0;
+  padding:0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+body{
+  background:#EEEEEE;
+  @include font-family('OpenSans');
+
+}
+
+#calculator {
+  width: 450px;
+  height:510px;
+  background-image: url("images/background.png");
+  background-color: #1F1F1F;
+  background-size: contain;
+  background-position : 50% 0;
+  background-repeat: no-repeat;
+  margin-left: auto ;
+  margin-right: auto ;
+
+}
+
+#inputNumber{
+  position: relative;
+  top: 60px;
+  height: 60px;
+  width: 410px;
+  color: #979797;
+  text-decoration: none;
+  background-image: url("images/input.png");
+  background-size: contain;
+  border-radius: 2px;
+  border: 0;
+  margin-left: 10px;
+  outline: none;
+  text-align: right;
+  padding: 0 10px 0 10px;
+  font-size: 57px;
+  color: white;
+  z-index:1;
+}
+
+#currentValues{
+  width: 200px;
+  height: 10px;
+  z-index:5;
+  position: relative;
+  top: 5px;
+  left: 15px;
+  font-size: 9px;
+  color: white;
+}
+
+#btnContainer{
+  position:relative;
+  top: 60px;
+  padding: 5px;
+  
+  .btnCalc{
+    width: 100px;
+    height: 85px;
+    line-height: 85px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px;
+    float: left;
+    background: url('images/btn_normal.png') no-repeat;
+    font-size:57px;
+    color: white;
+    outline: none;
+    border: none;
+ 
+  }
+  
+  .btnCalc.active{
+    background: url('images/btn_hit.png') no-repeat;
+    outline: none;
+    border: none;
+  }
+  
+  overflow: hidden;
+  
+  /*
+  &:after {
+    content : '.';
+    font-size: 0px;
+    line-height: 0px;
+    clear: left;
+  }
+  */
+}
